@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .card-stack {
+      perspective: 1000px;
+      width: 100px; 
+      height: 100px; 
+      position: absolute;
+      top: 20%;
+      user-select:none;
+    }
+    .cs1 {
+      left:10%;
+
+     /*  background-color:rgb(0, 0, 12); */
+    }
+    .cs2 {
+      left: 15%;
+
+      /* background-color:rgb(0, 0, 12); */
+    }
+    .cs3 {
+      left: 20%;
+      /* background-color:rgb(0, 0, 12); */
+    }
+    .cs4 {
+      left: 27%;
+      /* background-color:rgb(0, 0, 12); */
+    }
+    .cs5 {
+      left: 32%;
+      /* background-color:rgb(0, 0, 12); */
+    }
+
+    .card {
+      width: 100%;
+      height: 100px; 
+      position: relative;
+      transform-style: preserve-3d;
+      transform-origin: center;
+      animation: spinStack 1s linear forwards;
+    }
+
+    .card {
+      width: 100%;
+      height: 100px; 
+      position: relative;
+      transform-style: preserve-3d;
+      transform-origin: center;
+      animation: spinStack 1s linear infinite;
+     
+    }
+.c1 {
+animation-delay: .5s;
+}
+
+.c2 {
+  animation-delay: 9s;
+}
+.c3 {
+  animation-delay: 5s;
+}
+.c4 {
+  animation-delay: 3s;
+}
+.c5 {
+  animation-delay: 8s;
+}
+    .card div {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      background-color: #000000; 
+      border: 1px solid #d7dfe4; 
+      transform: rotateX(var(--rotation, 0deg)); 
+    }
+
+    .card div:nth-child(even) {
+      background-color: black; 
+      border: 1px solid #9da8a2; 
+    
+    }
+    .card div:nth-child(odd) {
+      background-color: black; 
+      border: 1px solid #9e99a7; 
+    }
+
+    .final {
+      width: 100%;
+    height: 100px;
+    animation: final .5s linear ;
+    }
+    @keyframes final {
+      from {
+        transform: rotateX(180deg);
+      }
+      to {
+        transform: rotateX(360deg);
+      }
+    }
+    @keyframes spinStack {
+      from {
+        transform: rotateX(0deg);
+      }
+      to {
+        transform: rotateX(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="card-stack cs1">
+  <div class="card c1">
+    <div style="--rotation: 0deg;"><img src="glyphs/1.png"></div>
+    <div style="--rotation: 60deg;"><img src="glyphs/2.png"></div>
+    <div style="--rotation: 180deg;"><img src="glyphs/3.png"></div>
+    <div style="--rotation: 240deg;"><img src="glyphs/1.png"></div>
+    <div style="--rotation: 300deg;"><img src="glyphs/2.png"></div>
+    <div style="--rotation: 360deg;"><img src="glyphs/3.png"></div>
+  </div>
+</div>
+<div class="card-stack cs2">
+  <div class="card c2">
+    <div style="--rotation: 0deg;"><img src="glyphs/2.png"></div>
+    <div style="--rotation: 60deg;"><img src="glyphs/3.png"></div>
+    <div style="--rotation: 180deg;"><img src="glyphs/1.png"></div>
+    <div style="--rotation: 240deg;"><img src="glyphs/2.png"></div>
+    <div style="--rotation: 300deg;"><img src="glyphs/3.png"></div>
+    <div style="--rotation: 360deg;"><img src="glyphs/1.png"></div>
+  </div>
+</div>
+<div class="card-stack cs3">
+  <div class="card c3">
+    <div style="--rotation: 0deg;"><img src="glyphs/3.png"></div>
+    <div style="--rotation: 60deg;"><img src="glyphs/2.png"></div>
+    <div style="--rotation: 180deg;"><img src="glyphs/1.png"></div>
+    <div style="--rotation: 240deg;"><img src="glyphs/3.png"></div>
+    <div style="--rotation: 300deg;"><img src="glyphs/2.png"></div>
+    <div style="--rotation: 360deg;"><img src="glyphs/1.png"></div>
+  </div>
+</div>
+<div class="card-stack cs4">
+  <div class="card c4">
+    <div style="--rotation: 0deg;"><img src="glyphs/4.png"></div>
+    <div style="--rotation: 60deg;"><img src="glyphs/5.png"></div>
+    <div style="--rotation: 180deg;"><img src="glyphs/4.png"></div>
+    <div style="--rotation: 240deg;"><img src="glyphs/5.png"></div>
+    <div style="--rotation: 300deg;"><img src="glyphs/4.png"></div>
+    <div style="--rotation: 360deg;"><img src="glyphs/5.png"></div>
+  </div>
+</div>
+<div class="card-stack cs5">
+  <div class="card c5">
+    <div style="--rotation: 0deg;"><img src="glyphs/5.png"></div>
+    <div style="--rotation: 60deg;"><img src="glyphs/4.png"></div>
+    <div style="--rotation: 180deg;"><img src="glyphs/5.png"></div>
+    <div style="--rotation: 240deg;"><img src="glyphs/4.png"></div>
+    <div style="--rotation: 300deg;"><img src="glyphs/5.png"></div>
+    <div style="--rotation: 360deg;"><img src="glyphs/4.png"></div>
+    <div style="--rotation: 0deg;"><img src="glyphs/5.png"></div>
+    <div style="--rotation: 60deg;"><img src="glyphs/4.png"></div>
+    <div style="--rotation: 180deg;"><img src="glyphs/5.png"></div>
+    <div style="--rotation: 240deg;"><img src="glyphs/4.png"></div>
+    <div style="--rotation: 300deg;"><img src="glyphs/5.png"></div>
+    <div style="--rotation: 360deg;"><img src="glyphs/4.png"></div>
+  </div>
+</div>
+</body>
+</html>
+
+<script>
+  // Get the image element
+  var c1 = document.querySelector('.c1');
+  var c2 = document.querySelector('.c2');
+  var c3 = document.querySelector('.c3');
+  var c4 = document.querySelector('.c4');
+  var c5 = document.querySelector('.c5');
+  setTimeout(function() {   
+    c1.style.animation = 'none';
+    c1.innerHTML = ""
+    c1.innerHTML = '<img class="final" src="glyphs/1.png">';
+  }, 28000); 
+  setTimeout(function() {   
+    c2.style.animation = 'none';
+    c2.innerHTML = ""
+    c2.innerHTML = '<img class="final" src="glyphs/2.png">';
+  }, 10000); 
+  setTimeout(function() {
+    c3.style.animation = 'none';
+    c3.innerHTML = ""
+    c3.innerHTML = '<img class="final" src="glyphs/3.png">';
+  }, 25000); 
+  setTimeout(function() {
+    c4.style.animation = 'none';
+    c4.innerHTML = ""
+    c4.innerHTML = '<img class="final" src="glyphs/4.png">';
+  }, 15000); 
+  setTimeout(function() {
+    c5.style.animation = 'none';
+    c5.innerHTML = ""
+    c5.innerHTML = '<img class="final" src="glyphs/5.png">';
+  }, 18000); 
+</script>

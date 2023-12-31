@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>403 Forbidden | Acates Media</title>
+    <link rel="stylesheet" href="https://acatesmedia.com/403/style.css">
+    <style>
+      @import url(https://acatesmedia.com/403/elements/PrintChar21.ttf);
+      @import url(https://acatesmedia.com/403/elements/TEAMSPIR.TTF);
+      .error {
+        font-family: 'Print Char 21', 'monospace';
+        font-size: 2em;
+        color: #c6c5c5;
+        padding: 0 5vw 5px 5vw;
+        transition: 1.6s linear;
+        user-select: none;
+      }
+      .click {
+        color: #aaf5b1;
+      }
+      .click span {
+        color: #aaf5b1;
+      }
+      @media screen and (max-width: 600px) {
+        .error {
+        font-size: 1em;
+      }
+}
+    </style>
+  </head>
+
+  <body>
+    <div class="error">HTTP <span>403</span> Forbidden: You don't have permission to access this file or directory or there's no index page.</div>
+    <div class="container">
+      <div class="base">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+      </div>
+    </div>
+    <script src="https://acatesmedia.com/403/script.js"></script>
+  </body>
+  <script>
+        var element = document.querySelector('.error');
+  function toggleContent() {
+    element.classList.toggle('click');
+
+   // if ('vibrate' in navigator) {
+    console.log(window.navigator)
+    console.log(navigator)
+    window.navigator.vibrate(5000);
+   // }
+  }
+
+  document.body.addEventListener('click', toggleContent);
+
+
+  </script>
+</html>
